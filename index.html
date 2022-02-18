@@ -8,16 +8,16 @@
 </head>
 <body>
   <div class="container">
-    <div class="row text-center">
+    <div class="row center">
       <h1>Weeky Planner</h1>
     </div>
-    <div class="row text-center">
-      <button id="add-entry">Add Entry</button>
+    <div class="row center">
+      <button class="add-entry" id="add-entry">Add Entry</button>
     </div>
-    <div class="overlay row text-center hidden">
+    <div class="overlay row center hidden">
       <div class="modal-bg">
-        <h2>Add Entry</h2>
-        <div class="row">
+        <h2 class="text-center">Add Entry</h2>
+        <div class="row col-gap">
           <select>
             <option>Week</option>
             <option>Sun</option>
@@ -30,10 +30,10 @@
           </select>
           <input type="time">
         </div>
-        <div class="row">
-          <textarea></textarea>
+        <div class="row tb-margin">
+          <textarea rows="5"></textarea>
         </div>
-        <div class="row">
+        <div class="row justify-right">
           <button id="submit" type="submit">Submit</button>
         </div>
       </div>
