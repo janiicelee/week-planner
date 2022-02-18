@@ -80,3 +80,12 @@ button:hover {
 .add-entry:hover {
   background-color: rgb(111, 111, 255);
 }
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+div.space-evenly > button {
+  padding: 2rem 0;
+  width: calc(100% / 10);
+}
