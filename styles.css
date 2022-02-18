@@ -1,3 +1,7 @@
+.hidden {
+  display: none !important;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,8 +9,10 @@
 body {
   margin: 0;
 }
+
 textarea {
   resize: none;
+  width: 100%;
 }
 
 h2 {
@@ -37,4 +43,12 @@ h2 {
   background-color: rgba(0 0 0 / 0.85);
 }
 
-.align-center
+.column-full {
+  flex-basis: 100%;
+}
+
+.modal-bg {
+  background-color: white;
+  padding: 1rem 2rem;
+  width: 30%;
+}

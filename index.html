@@ -12,10 +12,10 @@
       <h1>Weeky Planner</h1>
     </div>
     <div class="row text-center">
-      <button>Add Entry</button>
+      <button id="add-entry">Add Entry</button>
     </div>
-    <div class="overlay row text-center">
-      <div class="column-full">
+    <div class="overlay row text-center hidden">
+      <div class="modal-bg">
         <h2>Add Entry</h2>
         <div class="row">
           <select>
@@ -32,6 +32,9 @@
         </div>
         <div class="row">
           <textarea></textarea>
+        </div>
+        <div class="row">
+          <button id="submit" type="submit">Submit</button>
         </div>
       </div>
     </div>
