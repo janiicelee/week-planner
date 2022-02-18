@@ -23,6 +23,52 @@ button:hover {
   cursor: pointer;
 }
 
+table {
+  border: 1px solid black;
+  width: 80%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+td + td,
+th + th {
+  border-left: 1px solid;
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(177, 176, 176);
+}
+
+th {
+  font-weight: initial;
+  font-size: 0.8rem;
+  background-color: rgb(128, 126, 126);
+  line-height: 1em;
+  text-align: left;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0 0 0 / 0.85);
+}
+
+
+.modal-bg {
+  background-color: white;
+  padding: 1rem 2rem;
+  width: 30%;
+}
+
+
+div.space-evenly > button {
+  padding: 2rem 0;
+  width: calc(100% / 10);
+}
+
+/* UTILITY CLASSES */
+
 .container {
   max-width: 1000px;
   margin: auto;
@@ -30,6 +76,9 @@ button:hover {
 
 .row {
   display: flex;
+}
+.column-full {
+  flex-basis: 100%;
 }
 
 .center {
@@ -54,25 +103,6 @@ button:hover {
   margin: 1rem auto;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0 0 0 / 0.85);
-}
-
-.column-full {
-  flex-basis: 100%;
-}
-
-.modal-bg {
-  background-color: white;
-  padding: 1rem 2rem;
-  width: 30%;
-}
-
 .add-entry {
   padding: 0.5rem 1.5rem;
 }
@@ -83,9 +113,4 @@ button:hover {
 
 .space-evenly {
   justify-content: space-evenly;
-}
-
-div.space-evenly > button {
-  padding: 2rem 0;
-  width: calc(100% / 10);
 }
