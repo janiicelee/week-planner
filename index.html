@@ -43,25 +43,27 @@
     <div class="overlay row center hidden">
       <div class="modal-bg">
         <h2 class="text-center">Add Entry</h2>
-        <div class="row col-gap">
-          <select>
-            <option>Week</option>
-            <option>Sun</option>
-            <option>M</option>
-            <option>T</option>
-            <option>W</option>
-            <option>Thurs</option>
-            <option>F</option>
-            <option>S</option>
-          </select>
-          <input type="time">
-        </div>
-        <div class="row tb-margin">
-          <textarea rows="5"></textarea>
-        </div>
-        <div class="row justify-right">
-          <button id="submit" type="submit">Submit</button>
-        </div>
+        <form>
+          <div class="row col-gap">
+            <select>
+              <option>Week</option>
+              <option value="sun">Sunday</option>
+              <option value="mon">Monday</option>
+              <option value="tue">Tuesday</option>
+              <option value="wed">Wednesday</option>
+              <option value="thur">Thursday</option>
+              <option value="fri">Friday</option>
+              <option value="sat">Saturday</option>
+            </select>
+            <input type="time">
+          </div>
+          <div class="row tb-margin">
+            <textarea rows="5"></textarea>
+          </div>
+          <div class="row justify-right">
+            <button id="submit" type="submit">Submit</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

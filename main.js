@@ -8,26 +8,40 @@ $addEntry.addEventListener('click', function (event) {
   $overlay.classList.remove('hidden');
 });
 
-var $submit = document.querySelector('#submit');
-
-$submit.addEventListener('click', function (event) {
+var $form = document.querySelector('form');
+$form.addEventListener('submit', function (event) {
+  event.preventDefault();
+  var objectContainer = {};
   $overlay.classList.add('hidden');
+  var $input = document.querySelector('input');
+  var $select = document.querySelector('select');
+  var $textArea = document.querySelector('textarea');
+
+  objectContainer.time = $input.value;
+  objectContainer.description = $textArea.value;
+  data[$select.value].push(objectContainer);
+  reload($select.value, $select.selectedOptions[0].textContent);
+  $form.reset();
 });
 
 var $week = document.querySelector('#week');
+var $h3Element = document.querySelector('h3');
 
 $week.addEventListener('click', function (event) {
+  var $dataDay = event.target.getAttribute('data-day');
   if (event.target.tagName !== 'BUTTON') {
     return;
   }
-  var $h3Element = document.querySelector('h3');
-  $h3Element.textContent = 'Scheduled Events for ' + event.target.textContent;
-  var $dataDay = event.target.getAttribute('data-day');
-  $tbody.innerHTML = '';
-  for (var i = 0; i < data[$dataDay].length; i++) {
-    makeTree(data[$dataDay][i]);
-  }
+  reload($dataDay, event.target.textContent);
 });
+
+function reload(day, text) {
+  $h3Element.textContent = 'Scheduled Events for ' + text;
+  $tbody.innerHTML = '';
+  for (var i = 0; i < data[day].length; i++) {
+    makeTree(data[day][i]);
+  }
+}
 
 var $tbody = document.querySelector('tbody');
 
