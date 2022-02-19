@@ -11,14 +11,14 @@
     <div class="row center">
       <h1>Weekly Planner</h1>
     </div>
-    <div class="row space-evenly tb-margin">
-      <button>Sunday</button>
-      <button>Monday</button>
-      <button>Tuesday</button>
-      <button>Wednesday</button>
-      <button>Thursday</button>
-      <button>Friday</button>
-      <button>Saturday</button>
+    <div id="week" class="row space-evenly tb-margin">
+      <button data-day="sun">Sunday</button>
+      <button data-day="mon">Monday</button>
+      <button data-day="tue">Tuesday</button>
+      <button data-day="wed">Wednesday</button>
+      <button data-day="thur">Thursday</button>
+      <button data-day="fri">Friday</button>
+      <button data-day="sat">Saturday</button>
     </div>
     <div class="row center">
       <button class="add-entry" id="add-entry">Add Entry</button>
@@ -99,7 +99,7 @@
   </div>
 
 
-
+  <script src="data.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
