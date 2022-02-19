@@ -9,39 +9,67 @@
 <body>
   <div class="container">
     <div class="row center">
-      <h1>Weeky Planner</h1>
+      <h1>Weekly Planner</h1>
+    </div>
+    <div id="week" class="row space-evenly tb-margin">
+      <button data-day="sun">Sunday</button>
+      <button data-day="mon">Monday</button>
+      <button data-day="tue">Tuesday</button>
+      <button data-day="wed">Wednesday</button>
+      <button data-day="thur">Thursday</button>
+      <button data-day="fri">Friday</button>
+      <button data-day="sat">Saturday</button>
     </div>
     <div class="row center">
       <button class="add-entry" id="add-entry">Add Entry</button>
     </div>
+    <div class="row center">
+      <h3>Scheduled Events for Monday</h3>
+    </div>
+    <div class="row center">
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+
     <div class="overlay row center hidden">
       <div class="modal-bg">
         <h2 class="text-center">Add Entry</h2>
-        <div class="row col-gap">
-          <select>
-            <option>Week</option>
-            <option>Sun</option>
-            <option>M</option>
-            <option>T</option>
-            <option>W</option>
-            <option>Thurs</option>
-            <option>F</option>
-            <option>S</option>
-          </select>
-          <input type="time">
-        </div>
-        <div class="row tb-margin">
-          <textarea rows="5"></textarea>
-        </div>
-        <div class="row justify-right">
-          <button id="submit" type="submit">Submit</button>
-        </div>
+        <form>
+          <div class="row col-gap">
+            <select>
+              <option>Week</option>
+              <option value="sun">Sunday</option>
+              <option value="mon">Monday</option>
+              <option value="tue">Tuesday</option>
+              <option value="wed">Wednesday</option>
+              <option value="thur">Thursday</option>
+              <option value="fri">Friday</option>
+              <option value="sat">Saturday</option>
+            </select>
+            <input type="time">
+          </div>
+          <div class="row tb-margin">
+            <textarea rows="5"></textarea>
+          </div>
+          <div class="row justify-right">
+            <button id="submit" type="submit">Submit</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 
 
-
+  <script src="data.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
